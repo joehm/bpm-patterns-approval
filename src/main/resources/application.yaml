@@ -1,0 +1,10 @@
+camunda:
+  bpm:
+    default-serialization-format: application/json
+    authorization:
+      enabled: true
+    admin-user:
+      id: admin
+      password: admin
+    filter:
+      create: All Tasks

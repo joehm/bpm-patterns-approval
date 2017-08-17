@@ -1,0 +1,12 @@
+.DS_Store
+*.iml
+.idea
+.settings/
+.classpath
+.project
+version.txt
+*.versionsBackup
+target
+classes/
+camunda-license.txt
+
