@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="definitions_023gcmr" name="definitions" namespace="http://camunda.org/schema/1.0/dmn">
+  <decision id="determineApprovers" name="Determine Approvers">
+    <decisionTable id="decisionTable" hitPolicy="FIRST">
+      <input id="input1" label="Approval value" camunda:inputVariable="">
+        <inputExpression id="inputExpression1" typeRef="double">        <text>value</text>
+</inputExpression>
+      </input>
+      <input id="InputClause_1jgvr1e" label="Risk" camunda:inputVariable="risk">
+        <inputExpression id="LiteralExpression_0wz0m5u" typeRef="string">        <text>risk</text>
+</inputExpression>
+      </input>
+      <input id="InputClause_1cu6ttl" label="Step No." camunda:inputVariable="">
+        <inputExpression id="LiteralExpression_0y3f6op" typeRef="integer">        <text>stepNumber</text>
+</inputExpression>
+      </input>
+      <output id="output1" label="Names of approvers" name="approverNames" typeRef="string" />
+      <rule id="row-425849197-1">
+        <inputEntry id="UnaryTests_0g11mbo">        <text><![CDATA[<= 1000]]></text>
+</inputEntry>
+        <inputEntry id="UnaryTests_0049gfm">        <text><![CDATA["LOW"]]></text>
+</inputEntry>
+        <inputEntry id="UnaryTests_1k8f12i">        <text></text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_1ke9sdj">        <text><![CDATA["Peter"]]></text>
+</outputEntry>
+      </rule>
+      <rule id="row-425849197-2">
+        <inputEntry id="UnaryTests_1qtw3y9">        <text><![CDATA[<= 1000]]></text>
+</inputEntry>
+        <inputEntry id="UnaryTests_082j98a">        <text></text>
+</inputEntry>
+        <inputEntry id="UnaryTests_1tiv9al">        <text>1</text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_0sjexd1">        <text><![CDATA["Peter, Paul"]]></text>
+</outputEntry>
+      </rule>
+      <rule id="table-878869268-1">
+        <inputEntry id="UnaryTests_11u3hzl">        <text><![CDATA[<= 1000]]></text>
+</inputEntry>
+        <inputEntry id="UnaryTests_1p61lsi">        <text></text>
+</inputEntry>
+        <inputEntry id="UnaryTests_11zy8fh">        <text>2</text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_1bnv9hb">        <text><![CDATA["Mary, Mimi"]]></text>
+</outputEntry>
+      </rule>
+      <rule id="row-425849197-5">
+        <inputEntry id="UnaryTests_01wuxn6">        <text><![CDATA[> 1000]]></text>
+</inputEntry>
+        <inputEntry id="UnaryTests_19n0kq0">        <text><![CDATA["LOW"]]></text>
+</inputEntry>
+        <inputEntry id="UnaryTests_15qluif">        <text></text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_0odotib">        <text><![CDATA["Paul"]]></text>
+</outputEntry>
+      </rule>
+      <rule id="row-425849197-6">
+        <inputEntry id="UnaryTests_06x2y68">        <text><![CDATA[> 1000]]></text>
+</inputEntry>
+        <inputEntry id="UnaryTests_0pj1clk">        <text><![CDATA["MEDIUM"]]></text>
+</inputEntry>
+        <inputEntry id="UnaryTests_1fydsg4">        <text>1</text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_0zgzbqg">        <text><![CDATA["Paul, Mary"]]></text>
+</outputEntry>
+      </rule>
+      <rule id="table-878869268-3">
+        <inputEntry id="UnaryTests_0arnl5p">        <text><![CDATA[> 1000]]></text>
+</inputEntry>
+        <inputEntry id="UnaryTests_050knal">        <text><![CDATA["MEDIUM"]]></text>
+</inputEntry>
+        <inputEntry id="UnaryTests_170k66o">        <text>2</text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_1pfhtef">        <text><![CDATA["Mimi"]]></text>
+</outputEntry>
+      </rule>
+      <rule id="row-425849197-7">
+        <inputEntry id="UnaryTests_1plx00w">        <text><![CDATA[> 1000]]></text>
+</inputEntry>
+        <inputEntry id="UnaryTests_1mc5aej">        <text><![CDATA["HIGH"]]></text>
+</inputEntry>
+        <inputEntry id="UnaryTests_19557ld">        <text>1</text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_15zi6n9">        <text><![CDATA["Paul, Mary, Mimi"]]></text>
+</outputEntry>
+      </rule>
+      <rule id="row-425849197-8">
+        <inputEntry id="UnaryTests_0lykeek">        <text><![CDATA[> 1000]]></text>
+</inputEntry>
+        <inputEntry id="UnaryTests_02patk8">        <text><![CDATA["HIGH"]]></text>
+</inputEntry>
+        <inputEntry id="UnaryTests_0sqp2ap">        <text>2</text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_1uaki9j">        <text><![CDATA["Donald"]]></text>
+</outputEntry>
+      </rule>
+      <rule id="table-878869268-2">
+        <inputEntry id="UnaryTests_1ll7w44">        <text></text>
+</inputEntry>
+        <inputEntry id="UnaryTests_05797om">        <text></text>
+</inputEntry>
+        <inputEntry id="UnaryTests_1rlg1z1">        <text>3</text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_0bgop3v">        <text><![CDATA["Daisy"]]></text>
+</outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>

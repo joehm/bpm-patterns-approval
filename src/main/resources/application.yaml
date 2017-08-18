@@ -8,3 +8,6 @@ camunda:
       password: admin
     filter:
       create: All Tasks
+    history-level: full
+
+spring.h2.console.enabled: true

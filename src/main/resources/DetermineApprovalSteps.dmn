@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="definitions_023gcmr" name="definitions" namespace="http://camunda.org/schema/1.0/dmn">
+  <decision id="determineApprovalSteps" name="Determine Approval steps">
+    <decisionTable id="decisionTable" hitPolicy="FIRST">
+      <input id="InputClause_1jgvr1e" label="Risk" camunda:inputVariable="risk">
+        <inputExpression id="LiteralExpression_0wz0m5u" typeRef="string">        <text>risk</text>
+</inputExpression>
+      </input>
+      <output id="output1" label="Required iterations" name="approvalSteps" typeRef="integer" />
+      <rule id="row-425849197-1">
+        <inputEntry id="UnaryTests_0049gfm">        <text><![CDATA["LOW"]]></text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_1ke9sdj">        <text>1</text>
+</outputEntry>
+      </rule>
+      <rule id="row-425849197-2">
+        <inputEntry id="UnaryTests_082j98a">        <text><![CDATA["MEDIUM"]]></text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_0sjexd1">        <text>2</text>
+</outputEntry>
+      </rule>
+      <rule id="row-425849197-7">
+        <inputEntry id="UnaryTests_1mc5aej">        <text><![CDATA["HIGH"]]></text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_15zi6n9">        <text>3</text>
+</outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>
