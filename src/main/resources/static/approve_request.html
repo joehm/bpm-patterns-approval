@@ -46,15 +46,16 @@
         </div>
 
         <div class="form-group col-sm-6 col-xs-12">
-            <label class="control-label">Do you approve?</label>
-            <select name="approved"
+            <label class="control-label">Your decision?</label>
+            <select name="approvalDecision"
                     class="form-control"
                     required
-                    cam-variable-name="approved"
-                    cam-variable-type="Boolean">
+                    cam-variable-name="approvalDecision"
+                    cam-variable-type="String">
                 <option selected value=''></option>
-                <option value="true">Yes</option>
-                <option value="false">Nope</option>
+                <option value="APPROVED">OK, approved :-)</option>
+                <option value="DECLINED">No way!</option>
+                <option value="RESUBMISSION">Amendments required / Back to previous agent</option>
             </select>
         </div>
 

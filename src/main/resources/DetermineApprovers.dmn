@@ -15,6 +15,7 @@
 </inputExpression>
       </input>
       <output id="output1" label="Names of approvers" name="approverNames" typeRef="string" />
+      <output id="OutputClause_004m92g" label="Threshold for final decision" name="threshold" typeRef="integer" />
       <rule id="row-425849197-1">
         <inputEntry id="UnaryTests_0g11mbo">        <text><![CDATA[<= 1000]]></text>
 </inputEntry>
@@ -23,6 +24,8 @@
         <inputEntry id="UnaryTests_1k8f12i">        <text></text>
 </inputEntry>
         <outputEntry id="LiteralExpression_1ke9sdj">        <text><![CDATA["Peter"]]></text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_05vkdox">        <text></text>
 </outputEntry>
       </rule>
       <rule id="row-425849197-2">
@@ -34,6 +37,8 @@
 </inputEntry>
         <outputEntry id="LiteralExpression_0sjexd1">        <text><![CDATA["Peter, Paul"]]></text>
 </outputEntry>
+        <outputEntry id="LiteralExpression_1ku8wtt">        <text>1</text>
+</outputEntry>
       </rule>
       <rule id="table-878869268-1">
         <inputEntry id="UnaryTests_11u3hzl">        <text><![CDATA[<= 1000]]></text>
@@ -43,6 +48,8 @@
         <inputEntry id="UnaryTests_11zy8fh">        <text>2</text>
 </inputEntry>
         <outputEntry id="LiteralExpression_1bnv9hb">        <text><![CDATA["Mary, Mimi"]]></text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_03id0t4">        <text>2</text>
 </outputEntry>
       </rule>
       <rule id="row-425849197-5">
@@ -54,6 +61,8 @@
 </inputEntry>
         <outputEntry id="LiteralExpression_0odotib">        <text><![CDATA["Paul"]]></text>
 </outputEntry>
+        <outputEntry id="LiteralExpression_0uaxf77">        <text></text>
+</outputEntry>
       </rule>
       <rule id="row-425849197-6">
         <inputEntry id="UnaryTests_06x2y68">        <text><![CDATA[> 1000]]></text>
@@ -63,6 +72,8 @@
         <inputEntry id="UnaryTests_1fydsg4">        <text>1</text>
 </inputEntry>
         <outputEntry id="LiteralExpression_0zgzbqg">        <text><![CDATA["Paul, Mary"]]></text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_0ifjbqg">        <text>1</text>
 </outputEntry>
       </rule>
       <rule id="table-878869268-3">
@@ -74,6 +85,8 @@
 </inputEntry>
         <outputEntry id="LiteralExpression_1pfhtef">        <text><![CDATA["Mimi"]]></text>
 </outputEntry>
+        <outputEntry id="LiteralExpression_16r47rt">        <text></text>
+</outputEntry>
       </rule>
       <rule id="row-425849197-7">
         <inputEntry id="UnaryTests_1plx00w">        <text><![CDATA[> 1000]]></text>
@@ -83,6 +96,8 @@
         <inputEntry id="UnaryTests_19557ld">        <text>1</text>
 </inputEntry>
         <outputEntry id="LiteralExpression_15zi6n9">        <text><![CDATA["Paul, Mary, Mimi"]]></text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_11rjr4t">        <text>2</text>
 </outputEntry>
       </rule>
       <rule id="row-425849197-8">
@@ -94,6 +109,8 @@
 </inputEntry>
         <outputEntry id="LiteralExpression_1uaki9j">        <text><![CDATA["Donald"]]></text>
 </outputEntry>
+        <outputEntry id="LiteralExpression_1bzyiwc">        <text></text>
+</outputEntry>
       </rule>
       <rule id="table-878869268-2">
         <inputEntry id="UnaryTests_1ll7w44">        <text></text>
@@ -103,6 +120,8 @@
         <inputEntry id="UnaryTests_1rlg1z1">        <text>3</text>
 </inputEntry>
         <outputEntry id="LiteralExpression_0bgop3v">        <text><![CDATA["Daisy"]]></text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_0u49bob">        <text></text>
 </outputEntry>
       </rule>
     </decisionTable>

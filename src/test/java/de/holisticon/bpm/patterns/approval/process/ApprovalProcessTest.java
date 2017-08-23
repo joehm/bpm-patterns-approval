@@ -7,20 +7,14 @@ import org.camunda.bpm.engine.test.Deployment;
 import org.camunda.bpm.extension.needle.ProcessEngineNeedleRule;
 import org.camunda.bpm.extension.needle.ProcessEngineNeedleRuleBuilder;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 
 import javax.inject.Inject;
 import java.util.Map;
 
-import static de.holisticon.bpm.patterns.approval.process.ApprovalProcess.Elements.END_EVENT_APPROVAL_FINISHED;
-import static de.holisticon.bpm.patterns.approval.process.ApprovalProcess.Elements.START_EVENT_APPROVAL_REQUESTED;
-import static de.holisticon.bpm.patterns.approval.process.ApprovalProcess.Elements.USER_TASK_APPROVE;
 import static org.camunda.bpm.engine.test.assertions.bpmn.AbstractAssertions.init;
 import static org.camunda.bpm.engine.test.assertions.bpmn.BpmnAwareAssertions.assertThat;
-import static org.camunda.bpm.engine.test.assertions.bpmn.BpmnAwareTests.complete;
-import static org.camunda.bpm.engine.test.assertions.bpmn.BpmnAwareTests.task;
 
 /**
  * @author Jo Ehm (Holisticon)
@@ -46,36 +40,13 @@ public class ApprovalProcessTest {
     driver = new Driver();
 
     // automatically mock all delegates
-    // DelegateExpressions.autoMock(ShipmentProcess.RESOURCE);
+    // DelegateExpressions.autoMock(ApprovalProcess.RESOURCE);
   }
 
   @Test
   @Deployment(resources = ApprovalProcess.RESOURCE)
   public void should_deploy() {
-    // just deploy
-  }
-
-  @Ignore
-  @Test
-  @Deployment(resources = ApprovalProcess.RESOURCE)
-  public void should_start_process() {
-
-    // given
-    driver.startProcess(null);
-
-    // then
-    assertThat(instance).isWaitingAt(USER_TASK_APPROVE);
-
-    // when
-    complete(task(USER_TASK_APPROVE));
-
-    // then
-    assertThat(instance).isEnded();
-    assertThat(instance).hasPassedInOrder(
-        START_EVENT_APPROVAL_REQUESTED,
-        USER_TASK_APPROVE,
-        END_EVENT_APPROVAL_FINISHED
-    );
+    // just deploy to verify correct BPMN
   }
 
   private class Driver {

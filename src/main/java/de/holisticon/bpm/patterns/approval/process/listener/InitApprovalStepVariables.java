@@ -15,9 +15,9 @@ import static de.holisticon.bpm.patterns.approval.process.ApprovalProcess.Variab
  */
 @Component
 @Slf4j
-public class ExecuteApprovalInitVariables implements ExecutionListener {
+public class InitApprovalStepVariables implements ExecutionListener {
 
-  public static final String NAME = "executeApprovalInitVariables";
+  public static final String NAME = "initApprovalStepVariables";
 
   public void notify(DelegateExecution delegateExecution) throws Exception {
 
