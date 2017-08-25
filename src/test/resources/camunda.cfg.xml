@@ -3,6 +3,7 @@
 Process engine configuration for testing when using @Rule ProcessEngineRule rule = new ProcessEngineRule()
 See also https://github.com/camunda/camunda-bpm-examples/blob/master/servicetask/rest-service/src/test/resources/camunda.cfg.xml
 -->
+<!--suppress SpringFacetInspection -->
 <beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans   http://www.springframework.org/schema/beans/spring-beans.xsd">
 
